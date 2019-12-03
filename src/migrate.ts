@@ -74,7 +74,7 @@ function runMigrations(
 ): (client: pg.Client) => Promise<Array<Migration>> {
   return async (client: pg.Client) => {
     try {
-      const migrationTableName = "migrations"
+      const migrationTableName = "public.migrations"
 
       log("Will run migrations...")
 
